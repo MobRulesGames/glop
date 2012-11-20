@@ -1,8 +1,8 @@
 package gui
 
 import (
-  "github.com/runningwild/glop/gin"
-  "github.com/runningwild/opengl/gl"
+  "github.com/MobRulesGames/glop/gin"
+  "github.com/MobRulesGames/opengl/gl"
   "reflect"
 )
 

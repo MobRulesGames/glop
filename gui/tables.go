@@ -1,6 +1,6 @@
 package gui
 
-import "github.com/runningwild/opengl/gl"
+import "github.com/MobRulesGames/opengl/gl"
 
 type TableParams struct {
   Spacing int

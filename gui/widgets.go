@@ -5,8 +5,8 @@ import (
   _ "image/png"
   _ "image/jpeg"
   "os"
-  "github.com/runningwild/opengl/gl"
-  "github.com/runningwild/opengl/glu"
+  "github.com/MobRulesGames/opengl/gl"
+  "github.com/MobRulesGames/opengl/glu"
   "runtime"
 )
 

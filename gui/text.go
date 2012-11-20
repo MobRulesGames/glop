@@ -6,7 +6,7 @@ import (
   "code.google.com/p/freetype-go/freetype/truetype"
   "encoding/gob"
   "fmt"
-  "github.com/runningwild/glop/render"
+  "github.com/MobRulesGames/glop/render"
   "image"
   "image/color"
   "image/draw"
@@ -14,9 +14,9 @@ import (
   "runtime"
   "sort"
   "unsafe"
-  // "github.com/runningwild/opengl/gl"
-  gl "github.com/chsc/gogl/gl21"
-  "github.com/runningwild/opengl/glu"
+  // "github.com/MobRulesGames/opengl/gl"
+  gl "github.com/MobRulesGames/gogl/gl21"
+  "github.com/MobRulesGames/opengl/glu"
 )
 
 type subImage struct {
@@ -470,7 +470,7 @@ func MakeDictionary(font *truetype.Font, size int) *Dictionary {
   context.SetSrc(image.White)
   dpi := 150
   context.SetFontSize(float64(size))
-  context.SetDPI(dpi)
+  context.SetDPI(float64(dpi))
   var letters []image.Image
   rune_mapping := make(map[rune]image.Image)
   rune_info := make(map[rune]runeInfo)

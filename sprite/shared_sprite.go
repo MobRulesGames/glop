@@ -9,8 +9,8 @@ import (
   "sort"
   "strconv"
   "strings"
-  "github.com/runningwild/glop/util/algorithm"
-  "github.com/runningwild/yedparse"
+  "github.com/MobRulesGames/glop/util/algorithm"
+  "github.com/MobRulesGames/yedparse"
 )
 
 type sharedSprite struct {

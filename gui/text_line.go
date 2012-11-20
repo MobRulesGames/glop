@@ -1,14 +1,15 @@
 package gui
 
 import (
+  "flag"
   "fmt"
   "image"
   "image/draw"
   "image/color"
   "code.google.com/p/freetype-go/freetype"
   "code.google.com/p/freetype-go/freetype/truetype"
-  "github.com/runningwild/opengl/gl"
-  "github.com/runningwild/opengl/glu"
+  "github.com/MobRulesGames/opengl/gl"
+  "github.com/MobRulesGames/opengl/glu"
   "io/ioutil"
 )
 
@@ -59,6 +60,8 @@ func GetDict(name string) *Dictionary {
   return basic_dicts[name]
 }
 
+var size = flag.Float64("size", 12, "font size in points")
+
 func drawText(font *truetype.Font, c *freetype.Context, color color.Color, rgba *image.RGBA, text string) (int, int) {
   fg := image.NewUniform(color)
   bg := image.Transparent
@@ -72,7 +75,7 @@ func drawText(font *truetype.Font, c *freetype.Context, color color.Color, rgba 
   // TODO: wtf - this is all wrong!
   // fix fonts - we can't change the font size easily
   height := 1.3
-  pt := freetype.Pt(0, int(float64(c.FUnitToPixelRU(font.UnitsPerEm()))*height))
+  pt := freetype.Pt(0, int(float64(c.PointToFix32(*size)>>8)*height))
   adv, _ := c.DrawString(text, pt)
   pt.X += adv.X
   py := int(float64(pt.Y>>8)/height + 0.01)

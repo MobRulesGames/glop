@@ -5,8 +5,8 @@ package gos
 import "C"
 
 import (
-  "github.com/runningwild/glop/system"
-  "github.com/runningwild/glop/gin"
+  "github.com/MobRulesGames/glop/system"
+  "github.com/MobRulesGames/glop/gin"
   "unsafe"
 )
 

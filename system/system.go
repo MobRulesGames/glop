@@ -1,7 +1,7 @@
 package system
 
 import (
-  "github.com/runningwild/glop/gin"
+  "github.com/MobRulesGames/glop/gin"
 )
 
 type System interface {
