@@ -848,7 +848,7 @@ func (s *Sprite) Think(dt int64) {
           s.waiters[i].states = nil
         }
       }
-      algorithm.Choose(&s.waiters, func(w *waiter) bool {
+      algorithm.Choose2(&s.waiters, func(w *waiter) bool {
         return w.states != nil
       })
     }
